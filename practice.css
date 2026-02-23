@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Gveret+Levin&family=Orbitron:wght@400..900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family:'Gveret Levin', sans-serif;
+}
+body{
+    background-image: linear-gradient(to right bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    margin: 48px;
+    height: 100vh;
+}
+.toDoList{
+    background-color: rgba(255, 255, 255, 0.627);
+    min-width: 400px;
+    min-height: 200px;
+    border-radius: 20px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    margin:20px;
+    gap: 10px;
+}
+.addTask{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.595);
+    backdrop-filter: blur(8px);
+    padding: 12px 15px;
+    border-radius: 24px;
+    margin: 20px;
+}
+input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    background: transparent;
+}
+.fa-plus{
+    font-size: 24px;  /* increase this */
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 48px;
+    user-select: none;
+    cursor: pointer;
+}
+
