@@ -9,14 +9,15 @@ body{
     background-image: linear-gradient(to right bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     display: flex;
     align-items: center;
-    justify-content: top;
+    justify-content: flex-start;
     flex-direction: column;
     margin: 48px;
     min-height: 100vh;
 }
 .toDoList{
     background-color: rgba(255, 255, 255, 0.627);
-    min-width: 450px;
+    width: 90%;
+    max-width: 500px;   /* limits size on desktop */
     min-height: 200px;
     border-radius: 20px;
 }
@@ -41,7 +42,7 @@ input{
     outline: none;
     background: transparent;
     padding: 8px;
-
+    width: 100%;
 }
 button{
     border: none;
@@ -56,7 +57,7 @@ button{
 ul li{
     list-style: none;
     font-size: 16px;
-    padding: 12px 8px 12px 48px;
+    padding: 12px 60px 12px 48px;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -95,4 +96,18 @@ ul li span{
 }
 ul li span:hover{
     background: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 22px;
+    }
+
+    .toDoList {
+        border-radius: 15px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
 }
