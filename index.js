@@ -2,17 +2,21 @@ const inputBox = document.getElementById("inputBox");
 const listContainer = document.getElementById("listContainer");
 
 function addTask() {
-    if (inputBox.value === '') {
-        alert("You must write something");
-    } else {
-        let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        listContainer.appendChild(li);
+    const task = inputBox.value.trim();
 
-        let span = document.createElement("span");
-        span.innerHTML = '<i class="fa-solid fa-trash"></i>';
-        li.appendChild(span);
+
+    if (!task) {
+        alert("You must write something");
+        return;
     }
+
+    let li = document.createElement("li");
+    li.textContent = task;
+    listContainer.appendChild(li);
+
+    let span = document.createElement("span");
+    span.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    li.appendChild(span);
 
     inputBox.value = "";
     saveData();
